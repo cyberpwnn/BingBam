@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'ninja.bytecode'
+version '1.0'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    implementation group: 'net.sourceforge.htmlunit', name: 'htmlunit', version: '2.4'
+    implementation 'com.github.ArcaneArts:Quill:latest.release'
+}
+
+test {
+    useJUnitPlatform()
+}
